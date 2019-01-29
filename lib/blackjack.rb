@@ -33,7 +33,7 @@ def hit? (sum)
   answer = ""
   while answer!="s"
    prompt_user
-   answer=get_user_input
+   get_user_input
   #  case answer
   #   when "h"
   #     card=deal_card

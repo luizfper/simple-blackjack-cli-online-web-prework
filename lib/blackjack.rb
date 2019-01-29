@@ -32,7 +32,7 @@ end
 
 def hit? (sum)
   answer = ""
-  while answer!="s"
+  #while answer!="s"
    prompt_user
    get_user_input
   #  case answer
@@ -42,7 +42,7 @@ def hit? (sum)
   #   when "s"
   #     break
   #  end
-  end
+  #end
 end
 
 def invalid_command

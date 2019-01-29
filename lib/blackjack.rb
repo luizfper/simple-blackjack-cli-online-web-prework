@@ -43,9 +43,8 @@ def hit? (sum)
  #while answer!="s"
  prompt_user
  answer=get_user_input
- case answer
- when "h"
-   sum+=deal_card
+ if answer = "h"
+  sum+=deal_card
  end
  return sum, answer
 end

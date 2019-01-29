@@ -43,6 +43,7 @@ def hit? (sum)
   #     break
   #  end
   #end
+  return sum
 end
 
 def invalid_command

@@ -55,6 +55,6 @@ def runner
   sum = initial_round
   until sum>21
     sum = hit?
-    display_card_total
+    display_card_total(sum)
   end
 end

@@ -43,10 +43,8 @@ def hit? (sum)
  #while answer!="s"
  prompt_user
  answer=get_user_input
- if answer = 'h'
+ if answer == 'h'
   sum+=deal_card
-else
-  sum
  end
  return sum, answer
 end
@@ -65,8 +63,8 @@ def runner
   until sum>21
     sum,answer = hit?(sum)
     display_card_total(sum)
-    if answer="s"
-      #break
+    if answer=="s"
+      break
     end
   end
   dealer = rand(18..21)

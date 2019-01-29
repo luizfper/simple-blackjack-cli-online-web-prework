@@ -43,6 +43,7 @@ def hit? (sum)
  #while answer!="s"
  prompt_user
  answer=get_user_input
+ print answer
  if answer = "h"
   sum+=deal_card
  end

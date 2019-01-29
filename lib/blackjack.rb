@@ -41,7 +41,7 @@ def hit? (sum)
  when "s"
 
  end
- return sum
+ return sum, answer
 end
 
 def invalid_command

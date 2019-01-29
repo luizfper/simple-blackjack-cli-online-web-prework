@@ -64,7 +64,7 @@ def runner
     sum,answer = hit?(sum)
     display_card_total(sum)
     if answer="s"
-      break
+      #break
     end
   end
   dealer = rand(18..21)

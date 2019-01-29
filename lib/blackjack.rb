@@ -32,25 +32,14 @@ def initial_round
 end
 
 def hit? (sum)
-  answer = ""
-  #while answer!="s"
-   prompt_user
-   answer=get_user_input
-   case answer
-   when "h"
-     sum+=deal_card
-   end
-
-
-  #  case answer
-  #   when "h"
-  #     card=deal_card
-  #     sum+=card
-  #   when "s"
-  #     break
-  #  end
-  #end
-  return sum
+ #while answer!="s"
+ prompt_user
+ answer=get_user_input
+ case answer
+ when "h"
+   sum+=deal_card
+ end
+ return sum
 end
 
 def invalid_command
@@ -62,5 +51,9 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  Welcome
+  sum = initial_round
+  
+  sum = hit
+  display_card_total
 end

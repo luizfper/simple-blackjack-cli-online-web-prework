@@ -38,6 +38,8 @@ def hit? (sum)
  case answer
  when "h"
    sum+=deal_card
+ when "s"
+
  end
  return sum
 end
@@ -54,7 +56,7 @@ def runner
   welcome
   sum = initial_round
   until sum>21
-    sum = hit?(sum)
+    sum,answer = hit?(sum)
     display_card_total(sum)
   end
   end_game(sum)

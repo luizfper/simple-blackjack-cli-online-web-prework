@@ -69,7 +69,7 @@ def runner
   end
   dealer = rand(18..21)
   display_dealer_total(dealer)
-  if dealer > sum | sum>21
+  if dealer > sum || sum>21
     end_game(sum)
   else
     win_game(sum)

@@ -10,6 +10,10 @@ def display_card_total (card_total)
   puts "Your cards add up to #{card_total}"
 end
 
+def display_dealer_total (card_total)
+  puts "The dealer cards add up to #{card_total}"
+end
+
 def prompt_user
   puts "Type 'h' to hit or 's' to stay"
 end
@@ -21,6 +25,10 @@ end
 
 def end_game (card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"# code #end_game here
+end
+
+def win_game (card_total)
+  puts "You've hit #{card_total}. Congratulations! you destroyed the dealer!"# code #end_game here
 end
 
 def initial_round
@@ -38,8 +46,6 @@ def hit? (sum)
  case answer
  when "h"
    sum+=deal_card
- when "s"
-
  end
  return sum, answer
 end
@@ -58,6 +64,16 @@ def runner
   until sum>21
     sum,answer = hit?(sum)
     display_card_total(sum)
+    if answer="s"
+      break
+    end
   end
-  end_game(sum)
+  dealer = rand(18..21)
+  display_dealer_total
+  if dealer > sum
+    end_game(sum)
+  else
+    win_game(sum)
+  end
+
 end
